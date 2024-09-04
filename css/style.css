@@ -1,0 +1,143 @@
+/*general*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+/*Main*/
+.container {
+    height: 100vh;
+    background: rgb(1,179,120);
+    background: linear-gradient(180deg, rgba(1,179,120,1) 20%, rgba(255,255,255,1) 20%);
+}
+#app {
+    height: 100%;
+    padding: 70px 0;
+}
+.main-container {
+    background-color: #FFFFFF;
+    width: 70%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+/*ASIDE*/
+.main-container > aside { 
+    width: 30%;
+}
+.main-container > aside > header { 
+    background-color: #EAEAEA;
+
+}
+.main-container > aside > header > nav { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-container > aside > header > nav > ul { 
+    display: flex;  
+    list-style: none;
+    align-items: center;
+    padding: 15px;
+}
+.main-container > aside > header > nav > ul > li > span {     
+    font-size: 1.5rem;
+    padding-left: 5px;
+    font-weight: bold;
+}
+.main-container > aside > header > nav > ul > li > a {     
+    text-decoration: none;
+    color: grey;
+    font-size: 1.25rem;
+    padding-left: 20px;
+}
+.main-container > aside > header > nav > ul > li > img { 
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.activate-notification {
+    background-color: lightblue;
+    padding: 15px;
+    display: flex;
+}
+.activate-notification > span > i:first-child {
+    color: white;
+}
+.activate-notification > span > i:last-child {
+    color: lightblue;
+}
+.activate-notification > div {
+    padding-left: 5px;
+}
+.activate-notification > div > a {
+    color: grey;
+    font-size: 0.75rem;
+}
+
+.search-container {
+    display: flex;
+
+}
+.search-container > :first-child{
+    
+    width: 30px;
+    height: 30px;
+    
+
+}
+.search-container > :last-child{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    flex-grow: 1;
+}
+.search-container > *  {
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #EAEAEA;
+    padding: 5px;
+}
+.contact-container > div {
+    flex-grow: 1;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.contact-container > div > p:first-child {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.contact-container > div > p:last-child {
+    font-size: 0.75rem;
+    color: grey;
+}
+.last-message-time {
+    font-size: 0.75rem;
+    color: grey;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+
+.contact-container > img { 
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*CHAT SECTION*/
+
+.main-container > section { 
+    flex-grow: 1;
+}
