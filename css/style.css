@@ -21,7 +21,7 @@ img {
 .main-container {
     background-color: #FFFFFF;
     width: 70%;
-    height: 80vh;
+    height: 90vh;
     margin: 0 auto;
     display: flex;
 }
@@ -32,7 +32,7 @@ img {
 }
 .main-container > aside > header { 
     background-color: #EAEAEA;
-
+    height: 80px;
 }
 .main-container > aside > header > nav { 
     display: flex;
@@ -65,6 +65,7 @@ img {
     background-color: lightblue;
     padding: 15px;
     display: flex;
+    height: 60px;
 }
 .activate-notification > span > i:first-child {
     color: white;
@@ -82,14 +83,11 @@ img {
 
 .search-container {
     display: flex;
-
+    height: 50px;
 }
 .search-container > :first-child{
-    
     width: 30px;
     height: 30px;
-    
-
 }
 .search-container > :last-child{
     width: 100%;
@@ -100,13 +98,18 @@ img {
 .search-container > *  {
     padding: 20px;
 }
-
+main {
+    height: calc(100% - 190px);
+    overflow-y: auto;
+}
+.active {
+    background-color: #EAEAEA;
+}
 .contact-container {
     display: flex;
     align-items: center;
     cursor: pointer;
     position: relative;
-    background-color: #EAEAEA;
     padding: 5px;
 }
 .contact-container > div {
@@ -140,4 +143,5 @@ img {
 
 .main-container > section { 
     flex-grow: 1;
+    background-image: url(../img/mine.jpg);
 }

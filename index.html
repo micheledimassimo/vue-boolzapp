@@ -66,11 +66,15 @@
                         </div>
 
                         <main>
-                            <div class="contact-container active">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
+                            <div v-for="(contact, index) in contacts" 
+                            class="contact-container "
+                            :class="{
+                                'active': index == activeConcactIndex
+                            }">
+                                <img :src="contact.avatar" alt="contact.name">
                                 <div>
                                     <p>
-                                        Michele
+                                        {{ contact.name }}
                                     </p>
                                     <p class="last-message-info">
                                         Ultimo messaggio inviato
