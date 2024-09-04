@@ -16,7 +16,7 @@ img {
 }
 #app {
     height: 100%;
-    padding: 70px 0;
+    padding: 50px 0;
 }
 .main-container {
     background-color: #FFFFFF;
@@ -30,33 +30,42 @@ img {
 .main-container > aside { 
     width: 30%;
 }
-.main-container > aside > header { 
+.main-container > aside > header,
+.main-container > section > header { 
     background-color: #EAEAEA;
     height: 80px;
 }
-.main-container > aside > header > nav { 
+.main-container > aside > header > nav,
+.main-container > section > header > nav,
+.main-container > section > header > nav > div { 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.main-container > aside > header > nav > ul { 
+.main-container > aside > header > nav > ul,
+.main-container > section > header > nav > ul,
+.main-container > section > header > nav > div { 
     display: flex;  
     list-style: none;
     align-items: center;
     padding: 15px;
 }
-.main-container > aside > header > nav > ul > li > span {     
+.main-container > aside > header > nav > ul > li > span,
+.main-container > section > header > nav > div > div > p:first-child {     
     font-size: 1.5rem;
     padding-left: 5px;
     font-weight: bold;
 }
-.main-container > aside > header > nav > ul > li > a {     
+.main-container > aside > header > nav > ul > li > a,
+.main-container > section > header > nav > ul > li > a {     
     text-decoration: none;
     color: grey;
     font-size: 1.25rem;
     padding-left: 20px;
 }
-.main-container > aside > header > nav > ul > li > img { 
+.main-container > aside > header > nav > ul > li > img,
+.main-container > section > header > nav > ul > li > img,
+.main-container > section > header > nav > div > img { 
     width: 50px;
     object-fit: cover;
     border-radius: 50%;
@@ -93,6 +102,7 @@ img {
     width: 100%;
     height: 100%;
     border: 0;
+    border-radius: 5px;
     flex-grow: 1;
 }
 .search-container > *  {
@@ -121,7 +131,8 @@ main {
     font-size: 1.25rem;
     font-weight: bold;
 }
-.contact-container > div > p:last-child {
+.contact-container > div > p:last-child,
+.main-container > section > header > nav > div > div > p:last-child {
     font-size: 0.75rem;
     color: grey;
 }
@@ -144,4 +155,35 @@ main {
 .main-container > section { 
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    position: relative;
+}
+.main-container > section > main {
+    height: calc(100% -140px);
+    
+}
+.main-container > section > footer {
+    height: 60px;
+    width: 100%;
+    background-color: #F3EEEA;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.footer-container > i{
+    font-size: 1.5rem;
+    padding: 20px;
+    color: gray;
+}
+.footer-container > input {
+    flex-grow: 1;
+    padding: 10px;
+    height: 50%;
+    border: none;
+    border-radius: 5px;
 }
