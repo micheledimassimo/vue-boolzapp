@@ -159,6 +159,7 @@ main {
 }
 .main-container > section > main {
     height: calc(100% -140px);
+    padding: 50px;
     
 }
 .main-container > section > footer {
@@ -186,4 +187,39 @@ main {
     height: 50%;
     border: none;
     border-radius: 5px;
+}
+
+.message-container {
+    display: flex;
+    margin: 10px 0 10px;
+    background-color: aqua;
+    padding: 10px;
+    height: 60px;
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+   
+}
+.message {
+    padding-right: 30px;
+}
+
+.time {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    color: gray;
+    font-size: 0.75rem;
+}
+.sent {
+    text-align: left;
+    background-color: #D5F9BA;
+   
+    width: 50%;
+
+}
+.received {
+    background-color: white;
+   
+    width: 50%;
 }

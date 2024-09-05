@@ -70,7 +70,8 @@
                             class="contact-container "
                             :class="{
                                 'active': index == activeConcactIndex
-                            }">
+                            }"
+                            @click="clickContactChat(index)">
                                 <img :src="contact.avatar" alt="contact.name">
                                 <div>
                                     <p>
@@ -92,11 +93,11 @@
                             <nav>
                                 <div>
                                     
-                                        <img src="img/avatar_1.jpg" alt="avatar_1">
+                                        <img :src="contacts[activeConcactIndex].avatar" :alt="contacts[activeConcactIndex].name">
                                    
                                         <div>
                                             <p>
-                                                Michele
+                                                {{ contacts[activeConcactIndex].name }}
                                             </p>
                                             <p class=>
                                                 Ultimo accesso oggi alle 12:00
@@ -121,6 +122,32 @@
                         
                         <main>
 
+                            <div v-for="(msg, index) in contacts[activeConcactIndex].messages" 
+                            class="message-container "
+                            :class="{
+                                'sent': msg.status == 'sent',
+                                'received': msg.status == 'received'
+                            }">
+                                <div class="message-item ">
+                                    <div class="message">
+                                        {{ msg.message }}
+                                    </div>
+                                    <div class="time">
+                                        {{ msg.date }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="message-container received">
+                                <div class="message-item ">
+                                    <div class="message">
+                                        Hai portato a spasso il cane?
+                                    </div>
+                                    <div class="time">
+                                        15:30
+                                    </div>
+                                </div>
+                            </div> -->
                         </main>
 
                         <footer>
