@@ -4,6 +4,7 @@ const { createApp } = Vue
         data() {
             return {
                 activeConcactIndex: 3,
+                userMessage: '',
                 contacts: [
                     {
                         name: 'Michele',
@@ -174,6 +175,24 @@ const { createApp } = Vue
             clickContactChat(index) {
                 this.activeConcactIndex = index;
             },
-            
+            sendMessage() {
+                if (this.userMessage.trim() != '') {
+                    this.contacts[this.activeConcactIndex].messages.push({
+                        date: '...',
+                        message: this.userMessage,
+                        status: 'sent'
+                    });
+
+                this.userMessage = '';
+
+                setTimeout(() => {
+                    this.contacts[this.activeConcactIndex].messages.push({
+                        date: '...',
+                        message: 'ok',
+                        status: 'received'
+                    });  
+                }, 1000)
+                    };
+            }
         }
     }).mount('#app');
