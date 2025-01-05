@@ -3,8 +3,10 @@ const { createApp } = Vue
     createApp({
         data() {
             return {
-                activeConcactIndex: 3,
+                activeConcactIndex: 0,
                 userMessage: '',
+                userSearchInput: '',
+                lastmessage: '',
                 contacts: [
                     {
                         name: 'Michele',
@@ -193,6 +195,25 @@ const { createApp } = Vue
                     });  
                 }, 1000)
                     };
-            }
+            },
+         /*    showLastMessage() {
+                for (let i = 0; i < contacts.length; i++) {
+                    
+                    this.lastmessage = this.contacts.messages[i];
+                    return this.lastmessage;
+                }
+                
+            } */
+            /* searchInput() {
+                for (let i = 0; i < this.contacts.length; i++) {
+                    if (this.contacts[i].name.includes(this.userSearchInput.toLowercase()) ) {
+                        
+                    }
+                    
+                }
+                
+            } */
         }
+        
+        
     }).mount('#app');
